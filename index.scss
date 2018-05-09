@@ -1,0 +1,16 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  background-color: #5a5466;
+}
+
+.canvas {
+  height: 400px;
+  width: 650px;
+  background-color: #FEF6D1;
+  margin: auto;
+}
+

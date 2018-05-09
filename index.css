@@ -1,0 +1,12 @@
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+  background-color: #5a5466; }
+
+.canvas {
+  height: 400px;
+  width: 650px;
+  background-color: #FEF6D1;
+  margin: auto; }
+
+/*# sourceMappingURL=index.css.map */
