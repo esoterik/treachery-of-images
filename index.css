@@ -9,4 +9,10 @@ body {
   background-color: #FEF6D1;
   margin: auto; }
 
+.message {
+  text-align: center;
+  color: #403424;
+  line-height: 700px;
+  padding-left: 22px; }
+
 /*# sourceMappingURL=index.css.map */

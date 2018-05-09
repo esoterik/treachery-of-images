@@ -1,5 +1,6 @@
 $font-stack:    Helvetica, sans-serif;
 $primary-color: #333;
+$text-color: #403424; 
 
 body {
   font: 100% $font-stack;
@@ -12,5 +13,12 @@ body {
   width: 650px;
   background-color: #FEF6D1;
   margin: auto;
+}
+
+.message {
+  text-align: center;
+  color: $text-color;
+  line-height: 700px; 
+  padding-left: 22px;
 }
 
