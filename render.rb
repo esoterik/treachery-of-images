@@ -24,10 +24,10 @@ def circle(mod: nil, w:, h:, top:, left:)
     "top: #{top}%; left:#{left}%'></div>"
 end
 
-def draw(color: 'main', w:, h:, top:, left:, rotation: 0, radius: 50)
+def draw(color: 'main', w:, h:, top:, left:, rotate: 0, radius: 50, extra: nil)
   "<div class='#{color}' style='width: #{w}px; height: #{h}px; "\
-    "top: #{top}%; left:#{left}% transform: rotate(#{rotation}deg); "\
-    "border-radius: #{radius}%;'></div>"
+    "top: #{top}%; left:#{left}%; transform: rotate(#{rotate}deg); "\
+    "border-radius: #{radius}%; #{extra}'></div>"
 end
 
 f = File.read("index.html.erb")

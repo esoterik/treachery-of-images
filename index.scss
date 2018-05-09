@@ -5,6 +5,7 @@ $main-brown: #5D2F22;
 $dark_brown: #0C0E0B;
 $cream: #FEF6D1;
 $band: #A66A45;
+$black: #25130e;
 
 body {
   font: 100% $font-stack;
@@ -13,15 +14,28 @@ body {
 }
 
 .main {
+  position: absolute;
   background-color: $main-brown;
 }
 
 .dark {
+  position: absolute;
   background-color: $dark_brown;
 }
 
 .band {
+  position: absolute;
   background-color: $band;
+}
+
+.high {
+  position: absolute;
+  background-color: #D9BCAC;
+}
+
+.black {
+  position: absolute;
+  background-color: $black;
 }
 
 .canvas {

@@ -4,13 +4,24 @@ body {
   background-color: #5a5466; }
 
 .main {
+  position: absolute;
   background-color: #5D2F22; }
 
 .dark {
+  position: absolute;
   background-color: #0C0E0B; }
 
 .band {
+  position: absolute;
   background-color: #A66A45; }
+
+.high {
+  position: absolute;
+  background-color: #D9BCAC; }
+
+.black {
+  position: absolute;
+  background-color: #25130e; }
 
 .canvas {
   height: 400px;

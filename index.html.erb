@@ -10,11 +10,20 @@
     }
     .bowl {
       position: absolute;
-      background-color: #5D2F22;
+      background: #5D2F22;
       border-radius: 43%;
       height: 275px;
       width: 155px;
       box-shadow: -10px -10px 10px 15px #0C0E0B inset;
+    }
+    .bowl_light {
+      position: absolute;
+      background: radial-gradient(at 30% 60%, #D9BCAC , #5D2F22 50%);
+      border-radius: 43%;
+      height: 275px;
+      width: 155px;
+      position: absolute;
+        opacity: 0.5;
     }
     .bowl_rim {
       position: absolute;
@@ -36,9 +45,9 @@
       position: absolute;
       background-color: #5D2F22;
       border-radius: 50%;
-      height: 45px;
-      width: 60px;
-      box-shadow: 8px -10px 10px 4.5px #0C0E0B inset;
+      height: 53px;
+      width: 90px;
+      box-shadow: 10px -3px 7px 0px #0C0E0B inset;
     }
     .pipe1_wide {
       position: absolute;
@@ -106,39 +115,78 @@
   <%= erase_rect(width: 400, height: 100, top: 25, left: 9) %>
   <%= erase_rect(width: 100, height: 100, top: 45, left: 0) %>
   
-  <% 15.times do |i| %>
-    <%= render_shape(klass: 'darkpipe', top: 15 + (i / 2.to_f), left: 76 - i)%>
-  <% end %>
-
-  <% 15.times do |i| %>
-    <%= circle(top: 47 - (i * 0.3), left: 32 + (i * 0.5), w: 35, h: 30) %>
-  <% end %>
-
-  <% 35.times do |i| %>
-    <%= circle(top: 42.8 - (i * 0.5), left: 39 + (i * 0.5), w: 35, h: 35) %>
-  <% end %>
-
-  <% 35.times do |i| %>
-    <%= circle(top: 47 - (i * 0.5), left: 39 + (i * 0.5), w: 35, h: 35) %>
-  <% end %>
-
-  <% 35.times do |i| %>
-    <%= circle(top: 51 - (i * 0.5), left: 39 + (i * 0.5), w: 35, h: 35) %>
-  <% end %>
-
-  <% 35.times do |i| %>
-    <%= circle(top: 51 - (i * 0.5), left: 39 + (i * 0.5), w: 35, h: 35) %>
-  <% end %>
-
   <div class="bowl" style="top: 0%; left: 9%"></div>
   <%= erase_rect(width: 160, height: 100, top: 0, left: 9) %>
   <div class="bowl_rim" style="top: 20%; left: 9%">
     <div class="bowl_inner" style="top:28%; left: 10%"></div>
   </div>
 
-  <div class="pipe1_shaded" style="top: 46%; left: 31%;"></div>
 
-  <%= draw(w: 160, h: 100, top: 0, left: 9) %>
+  <% draw(color: 'high', w: 10, h: 60, top: 30, left: 12, radius: 40,
+           rotate: -3,
+           extra: 'opacity: 0.5; box-shadow: -0px 0px 15px 10px rgb(217, 188, 172)') %>
+  
+
+  <%= draw(w: 70, h: 30, top: 48, left: 35, radius: 20, rotate: -10) %>
+  <%= draw(w: 70, h: 30, top: 45, left: 40, radius: 20, rotate: -20) %>
+  <%= draw(w: 70, h: 30, top: 43, left: 43, radius: 20, rotate: -25) %>
+  <%= draw(w: 70, h: 30, top: 39, left: 46, radius: 20, rotate: -28) %>
+  <%= draw(w: 70, h: 30, top: 36, left: 49, radius: 20, rotate: -30) %>
+  <%= draw(w: 70, h: 30, top: 34, left: 53, radius: 20, rotate: -25) %>
+
+  <%= draw(w: 90, h: 30, top: 44, left: 38, radius: 40, rotate: -23) %>
+
+  <%= draw(w: 70, h: 30, top: 47, left: 35, radius: 20, rotate: -10) %>
+  <%= draw(w: 70, h: 30, top: 45, left: 40, radius: 20, rotate: -20) %>
+  <%= draw(w: 70, h: 30, top: 42, left: 43, radius: 20, rotate: -25) %>
+  <%= draw(w: 70, h: 30, top: 39, left: 46, radius: 20, rotate: -28) %>
+  <%= draw(w: 70, h: 30, top: 36, left: 49, radius: 20, rotate: -31) %>
+  <%= draw(w: 70, h: 30, top: 33, left: 53, radius: 20, rotate: -25) %>
+
+  <%= draw(color: 'dark', w: 70, h: 30, top: 55, left: 43, radius: 25,
+           rotate: -35) %>
+  <%= draw(color: 'dark', w: 70, h: 30, top: 52, left: 46, radius: 15,
+           rotate: -30) %>
+  <%= draw(color: 'dark', w: 70, h: 30, top: 45.5, left: 53, radius: 15,
+           rotate: -30) %>
+  <%= draw(color: 'dark', w: 70, h: 30, top: 43.4, left: 55, radius: 15,
+           rotate: -30) %>
+
+  <%= draw(w: 180, h: 40, top: 43, left: 38, radius: 20, rotate: -25,
+           extra: 'box-shadow: 6px -10px 7px 0px #0C0E0B inset;') %>
+
+  <%= draw(color: 'black', w: 50, h: 30, top: 27.5, left: 62, radius: 15,
+           rotate: -30) %>
+  <%= draw(color: 'black', w: 50, h: 30, top: 24, left: 66, radius: 15,
+           rotate: -25) %>
+  <%= draw(color: 'black', w: 40, h: 30, top: 22, left: 70, radius: 40,
+           rotate: -15) %>
+  <%= draw(color: 'black', w: 50, h: 40, top: 21, left: 73, radius: 25,
+           rotate: -5) %>
+  <%= draw(color: 'black', w: 50, h: 30, top: 20.8, left: 76, radius: 25,
+           rotate: 0) %>
+
+
+  <%= draw(color: 'black', w: 80, h: 60, top: 27, left: 62, radius: 25,
+           rotate: -40,
+           extra: 'box-shadow: 0px -20px 7px 0px #000000 inset;') %>
+
+  <%= draw(color: 'black', w: 80, h: 25, top: 27, left: 72, radius: 15,
+           rotate: -22,
+           extra: 'box-shadow: 0px -20px 7px 0px #000000 inset;') %>
+
+  <%= draw(color: 'black', w: 30, h: 35, top: 20, left: 81, radius: 50,
+           rotate: 0,
+           extra: 'transform: skewY(45deg);box-shadow: -200px 0px 7px 0px #000000 inset;') %>
+
+
+  <%= draw(w: 21, h: 72, top: 29, left: 62, radius: 0, rotate: -29,
+           color: 'band',
+           extra: 'box-shadow: 0px -28px 7px 0px #3E2622 inset;') %>
+
+
+  <div class="pipe1_shaded" style="top: 48%; left: 30%; transform: rotate(-10deg);"></div>
+
 
   <div class="message">
     Ceci&nbsp; n'est pas une propri&eacute;t&eacute; intellectuelle .
