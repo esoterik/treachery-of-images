@@ -17,5 +17,18 @@ def erase_rect(width: 5, height: 5, top:, left:)
   "<div class='eraser_rectangle' style='width: #{width}px; height: #{height}px; "\
     "top: #{top}%; left:#{left}%'></div>"
 end
+
+def circle(mod: nil, w:, h:, top:, left:)
+  klass = "pipe_circle#{'_' + mod if mod}"
+  "<div class='#{klass}' style='width: #{w}px; height: #{h}px; "\
+    "top: #{top}%; left:#{left}%'></div>"
+end
+
+def draw(color: 'main', w:, h:, top:, left:, rotation: 0, radius: 50)
+  "<div class='#{color}' style='width: #{w}px; height: #{h}px; "\
+    "top: #{top}%; left:#{left}% transform: rotate(#{rotation}deg); "\
+    "border-radius: #{radius}%;'></div>"
+end
+
 f = File.read("index.html.erb")
 puts ERB.new(f).result

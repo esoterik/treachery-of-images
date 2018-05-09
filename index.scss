@@ -4,11 +4,24 @@ $text-color: #403424;
 $main-brown: #5D2F22;
 $dark_brown: #0C0E0B;
 $cream: #FEF6D1;
+$band: #A66A45;
 
 body {
   font: 100% $font-stack;
   color: $primary-color;
   background-color: #5a5466;
+}
+
+.main {
+  background-color: $main-brown;
+}
+
+.dark {
+  background-color: $dark_brown;
+}
+
+.band {
+  background-color: $band;
 }
 
 .canvas {
@@ -26,20 +39,28 @@ body {
   padding-left: 22px;
 }
 
-.pipe1_tiny {
+.pipe_circle {
   position: absolute;
   background-color: $main_brown;
   border-radius: 50%;
   height: 5px;
   width: 5px;;
 }
-.pipe2_tiny {
+.pipe_circle_dark{
   position: absolute;
   background-color: $dark_brown;
   border-radius: 50%;
   height: 5px;
   width: 5px;;
 }
+.pipe_circle_band{
+  position: absolute;
+  background-color: $band;
+  border-radius: 50%;
+  height: 5px;
+  width: 5px;;
+}
+
 .eraser {
   position: absolute;
   background-color: $cream;
