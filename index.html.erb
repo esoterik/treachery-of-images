@@ -12,9 +12,25 @@
       position: absolute;
       background-color: #5D2F22;
       border-radius: 43%;
-      height: 200px;
-      width: 150px;
+      height: 275px;
+      width: 155px;
       box-shadow: -10px -10px 10px 15px #0C0E0B inset;
+    }
+    .bowl_rim {
+      position: absolute;
+      background-color:#C4A590;
+      border-radius: 50%;
+      height: 35px;
+      width: 155px;
+      box-shadow: -15px 5px 5px 1px #A58063 inset;
+    }
+    .bowl_inner {
+      position: absolute;
+      background-color:#55403D;
+      border-radius: 50%;
+      height: 18px;
+      width: 121px;
+      box-shadow: 20px 3px 5px 2px #0C0E0B inset;
     }
     .pipe1_shaded {
       position: absolute;
@@ -145,7 +161,11 @@
     <%= erase(width: 7, height: 7, top: 45 - (i * 0.2), left: 31.2 + (i * 0.2)) %>
   <% end %>
 
-  <div class="bowl" style="top: 20%; left: 10%"></div>
+  <div class="bowl" style="top: 0%; left: 9%"></div>
+  <%= erase_rect(width: 160, height: 100, top: 0, left: 9) %>
+  <div class="bowl_rim" style="top: 20%; left: 9%">
+    <div class="bowl_inner" style="top:28%; left: 10%"></div>
+  </div>
 
   <div class="pipe1_shaded" style="top: 46%; left: 29.3%;"></div>
 

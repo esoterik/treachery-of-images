@@ -7,6 +7,7 @@ body {
   height: 400px;
   width: 650px;
   background-color: #FEF6D1;
+  position: absolute;
   margin: auto; }
 
 .message {
@@ -33,6 +34,12 @@ body {
   position: absolute;
   background-color: #FEF6D1;
   border-radius: 50%;
+  height: 5px;
+  width: 5px; }
+
+.eraser_rectangle {
+  position: absolute;
+  background-color: #FEF6D1;
   height: 5px;
   width: 5px; }
 
