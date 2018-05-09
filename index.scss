@@ -1,6 +1,9 @@
 $font-stack:    Helvetica, sans-serif;
 $primary-color: #333;
 $text-color: #403424; 
+$main-brown: #5D2F22;
+$dark_brown: #0C0E0B;
+$cream: #FEF6D1;
 
 body {
   font: 100% $font-stack;
@@ -11,7 +14,7 @@ body {
 .canvas {
   height: 400px;
   width: 650px;
-  background-color: #FEF6D1;
+  background-color: $cream;
   margin: auto;
 }
 
@@ -22,3 +25,24 @@ body {
   padding-left: 22px;
 }
 
+.pipe1_tiny {
+  position: absolute;
+  background-color: $main_brown;
+  border-radius: 50%;
+  height: 5px;
+  width: 5px;;
+}
+.pipe2_tiny {
+  position: absolute;
+  background-color: $dark_brown;
+  border-radius: 50%;
+  height: 5px;
+  width: 5px;;
+}
+.eraser {
+  position: absolute;
+  background-color: $cream;
+  border-radius: 50%;
+  height: 5px;
+  width: 5px;;
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="index.css" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+  <style>
+    body {
+      font-family: 'Calligraffitti';font-size: 30px; font-weight: bold;
+    }
+    .bowl {
+      position: absolute;
+      background-color: #5D2F22;
+      border-radius: 43%;
+      height: 200px;
+      width: 150px;
+      box-shadow: -10px -10px 10px 15px #0C0E0B inset;
+    }
+    .pipe1_shaded {
+      position: absolute;
+      background-color: #5D2F22;
+      border-radius: 50%;
+      height: 45px;
+      width: 60px;
+      box-shadow: 10px -10px 10px 5px #0C0E0B inset;
+    }
+    .pipe1_wide {
+      position: absolute;
+      background-color: #5D2F22;
+      border-radius: 50%;
+      height: 35px;
+      width: 174px;
+    }
+    .pipe1 {
+      position: absolute;
+      background-color: #5D2F22;
+      border-radius: 50%;
+      height: 80px;
+      width: 90px;;
+    }
+    .pipe2 {
+      position: absolute;
+      background-color: #0C0E0B;
+      border-radius: 50%;
+      height: 50px;
+      width: 200px;;
+    }
+    .end {
+      background-color: #3A2E46;
+      position: absolute;
+      border-radius: 50%;
+      height: 35px;
+      width: 40px;
+    }
+    .end_rect_highlight {
+      background-color: #8E7F86;
+      position: absolute;
+      border-radius: 5%;
+      height: 5px;
+      width: 20px;
+    }
+    .darkpipe {
+      background-color: #3A2E46;
+      position: absolute;
+      border-radius: 50%;
+      height: 70px;
+      width: 70px;
+    }
+    .pipe_shader {
+      position: absolute;
+      background-color: #0C0E0B;
+      border-radius: 50%;
+      height: 30px;
+      width: 30px;
+    }
+    .band {
+      background-color: #A66A45;
+      position: absolute;
+      border-radius: 50%;
+      height: 10px;
+      width: 10px;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="canvas">
+  <div class="end" style="top: 19%; left: 80%"></div>
+
+  <% 15.times do |i| %>
+    <%= render_shape(klass: 'darkpipe', top: 15 + (i / 2.to_f), left: 76 - i)%>
+  <% end %>
+
+  <div class="end_rect_highlight" style="top: 24%; left: 81%"></div>
+
+  <div class="pipe1_wide" style="top:50%;left:25%"></div>
+
+  <% 10.times do |i| %>
+    <%= render_shape(klass: 'pipe1', top: 45 - (i / 4.to_f), left: 29 + i)%>
+  <% end %>
+
+  <% 20.times do |i| %>
+    <%= render_shape(klass: 'pipe1', top: 42 - i, left: 39 + i)%>
+  <% end %>
+
+  <div class="pipe1_tiny" style="top:43%;left:42%;"></div>
+  <div class="pipe1_tiny" style="top:42.75%;left:42.25%;"></div>
+  <div class="pipe1_tiny" style="top:42.5%;left:42.5%;"></div>
+
+  <div class="pipe1_tiny" style="top:46.2%;left:31%;"></div>
+  <div class="pipe1_tiny" style="top:47%;left:31%;"></div>
+  <div class="pipe1_tiny" style="top:47%;left:31.2%;"></div>
+  <div class="pipe1_tiny" style="top:46.4%;left:31.2%;"></div>
+  <div class="pipe1_tiny" style="top:46.2%;left:31.2%;"></div>
+  <div class="pipe1_tiny" style="top:46.2%;left:31.6%;"></div>
+  <div class="pipe1_tiny" style="top:46.1%;left:31.8%;"></div>
+
+  <div class="pipe2" style="top:56%;left:14.5%"></div>
+  <div class="pipe2" style="width:178px;top:55%;left:18%"></div>
+  <div class="pipe2" style="width:174px;top:54%;left:20%"></div>
+
+  <% 30.times do |i| %>
+    <%= render_shape(klass: 'pipe_shader', top: 55 - (i / 2.to_f),
+                     left: 40 + (i / 2.to_f)) %>
+  <% end %>
+
+  <% 10.times do |i| %>
+    <%= render_shape(klass: 'band', top: 30.5 + (i / 5.to_f), left: 60)%>
+  <% end %>
+
+  <% 5.times do |i| %>
+    <%= render_shape(klass: 'band', top: 31 + (i / 5.to_f), left: 59)%>
+  <% end %>
+
+  <% 15.times do |i| %>
+    <%= render_shape(klass: 'band', top: 30 + (i / 5.to_f), left: 61)%>
+  <% end %>
+
+  <% 18.times do |i| %>
+    <%= render_shape(klass: 'band', top: 30.5 + (i / 5.to_f), left: 62)%>
+  <% end %>
+
+  <% 20.times do |i| %>
+    <%= erase(width: 7, height: 7, top: 45 - (i * 0.2), left: 31.2 + (i * 0.2)) %>
+  <% end %>
+
+  <div class="bowl" style="top: 20%; left: 10%"></div>
+
+  <div class="pipe1_shaded" style="top: 46%; left: 29.3%;"></div>
+
+  <div class="message">
+    Ceci&nbsp; n'est pas une propri&eacute;t&eacute; intellectuelle .
+  </div>
+</div>
+
+
+</body>
+</html> 
+

@@ -15,4 +15,25 @@ body {
   line-height: 700px;
   padding-left: 22px; }
 
+.pipe1_tiny {
+  position: absolute;
+  background-color: #5D2F22;
+  border-radius: 50%;
+  height: 5px;
+  width: 5px; }
+
+.pipe2_tiny {
+  position: absolute;
+  background-color: #0C0E0B;
+  border-radius: 50%;
+  height: 5px;
+  width: 5px; }
+
+.eraser {
+  position: absolute;
+  background-color: #FEF6D1;
+  border-radius: 50%;
+  height: 5px;
+  width: 5px; }
+
 /*# sourceMappingURL=index.css.map */
